@@ -1,5 +1,6 @@
 <?php
 
+use App\JsonAuth\JsonAuth;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -14,4 +15,4 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::post('/login', 'Auth\LoginController@login');
+JsonAuth::routes();
