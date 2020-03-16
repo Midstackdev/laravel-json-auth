@@ -21,6 +21,11 @@ class JsonAuth
 
 			Route::post('logout', 'LoginController@logout')->name('logout');
 
+            // Password Reset Routes...
+            if ($options['reset'] ?? true) {
+                self::resetPassword();
+            }
+
             // Email Verification Routes...
             if ($options['verify'] ?? true) {
                 self::emailVerification();
@@ -29,6 +34,19 @@ class JsonAuth
 
         
 	}
+
+    /**
+     * Register the typical reset password routes for an application.
+     *
+     * @return void
+     */
+    public static function resetPassword()
+    {
+        Route::get('password/reset', 'ForgotPasswordController@showLinkRequestForm')->name('password.request');
+        Route::post('password/email', 'ForgotPasswordController@sendResetLinkEmail')->name('password.email');
+        Route::get('password/reset/{token}', 'ResetPasswordController@showResetForm')->name('password.reset');
+        Route::post('password/reset', 'ResetPasswordController@reset')->name('password.update');
+    }
 
      /**
      * Register the typical email verification routes for an application.
