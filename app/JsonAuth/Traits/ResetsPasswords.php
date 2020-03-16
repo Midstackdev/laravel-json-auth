@@ -2,6 +2,7 @@
 
 namespace App\JsonAuth\Traits;
 
+use Illuminate\Auth\Events\PasswordReset;
 use Illuminate\Http\Request;
 use Illuminate\Support\Str;
 use Illuminate\Validation\ValidationException;
