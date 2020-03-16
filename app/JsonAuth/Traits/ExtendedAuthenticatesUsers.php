@@ -1,6 +1,6 @@
 <?php
 
-namespace App\JsonAuth;
+namespace App\JsonAuth\Traits;
 
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
 

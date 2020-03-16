@@ -1,6 +1,6 @@
 <?php
 
-namespace App\JsonAuth;
+namespace App\JsonAuth\Traits;
 
 trait RespondWithToken
 {

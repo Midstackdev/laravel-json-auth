@@ -1,6 +1,6 @@
 <?php
 
-namespace App\JsonAuth;
+namespace App\JsonAuth\Traits;
 
 use Illuminate\Http\Request;
 use Tymon\JWTAuth\Exceptions\JWTException;

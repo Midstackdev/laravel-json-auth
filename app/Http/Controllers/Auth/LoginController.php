@@ -3,7 +3,7 @@
 namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
-use App\JsonAuth\AuthenticatesUsers;
+use App\JsonAuth\Traits\AuthenticatesUsers;
 use App\Providers\RouteServiceProvider;
 
 class LoginController extends Controller
